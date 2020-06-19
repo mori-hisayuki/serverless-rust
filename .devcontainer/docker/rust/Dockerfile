@@ -23,7 +23,6 @@ WORKDIR /home/vscode/develop
 RUN mkdir /home/vscode/init
 COPY --chown=vscode:vscode ./script/docker-entrypoint.sh /home/vscode/init
 
-SHELL ["/bin/bash", "-c"]
 #rust setting
 RUN rustup update 2>&1 \
     && rustup component add rls rust-analysis rust-src rustfmt clippy 2>&1
@@ -33,9 +32,10 @@ RUN git clone git://github.com/nodenv/nodenv.git ~/.nodenv \
     && git clone git://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build \
     && echo 'export PATH="$HOME/.nodenv/bin:$PATH"' >> ~/.bash_profile \
     && echo 'eval "$(nodenv init -)"' >> ~/.bash_profile \
-    && source ~/.bash_profile \
+    && echo 'source ~/.bash_profile' >> ~/.bashrc \
+    && . ~/.bash_profile \
     && nodenv install 13.14.0 \
     && nodenv global 13.14.0 \
     && npm install
 
-ENTRYPOINT ["/bin/bash", "/home/vscode/init/docker-entrypoint.sh"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]

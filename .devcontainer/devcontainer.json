@@ -33,7 +33,8 @@
 		"ionutvmi.path-autocomplete",
 		"humao.rest-client",
 		"vscode-icons-team.vscode-icons",
-		"vector-of-bool.gitflow"
+		"vector-of-bool.gitflow",
+		"ms-vsliveshare.vsliveshare"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
