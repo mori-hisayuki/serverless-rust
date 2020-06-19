@@ -1,5 +1,9 @@
+#vscode
 vscode
+.vscode
 
 #Added by cargo
-
 /target
+
+#node
+node_modules

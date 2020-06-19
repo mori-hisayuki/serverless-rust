@@ -34,4 +34,5 @@ RUN git clone git://github.com/nodenv/nodenv.git ~/.nodenv \
 #node install
 RUN source ~/.bash_profile \
     && nodenv install 13.14.0 \
-    && nodenv global 13.14.0
+    && nodenv global 13.14.0 \
+    && npm install

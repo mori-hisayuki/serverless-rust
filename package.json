@@ -1,0 +1,23 @@
+{
+  "name": "develop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mori-hisayuki/serverless-rust.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mori-hisayuki/serverless-rust/issues"
+  },
+  "homepage": "https://github.com/mori-hisayuki/serverless-rust#readme",
+  "devDependencies": {
+    "serverless": "^1.73.1",
+    "serverless-rust": "^0.3.8"
+  }
+}
