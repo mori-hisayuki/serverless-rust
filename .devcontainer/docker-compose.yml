@@ -28,6 +28,7 @@ services:
         USERNAME: vscode
     environment:
       - TZ=JST-9
+    tty: true
     volumes:
       # Update this to wherever you want VS Code to mount the folder of your project
       - ..:/home/vscode/develop:cached
@@ -43,4 +44,3 @@ services:
 
     # Overrides default command so things don't shut down after the process ends.
     # user: vscode
-    command: /bin/sh -c "while sleep 1000; do :; done"
