@@ -19,10 +19,6 @@ RUN apt-get update \
 USER ${USERNAME}
 WORKDIR /home/vscode/develop
 
-# init
-RUN mkdir /home/vscode/init
-COPY --chown=vscode:vscode ./script/docker-entrypoint.sh /home/vscode/init
-
 #rust setting
 RUN rustup update 2>&1 \
     && rustup component add rls rust-analysis rust-src rustfmt clippy 2>&1
