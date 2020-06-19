@@ -38,4 +38,4 @@ RUN git clone git://github.com/nodenv/nodenv.git ~/.nodenv \
     && nodenv global 13.14.0 \
     && npm install
 
-ENTRYPOINT /home/vscode/init/docker-entrypoint.sh && while sleep 1000; do :; done
+ENTRYPOINT ["/bin/bash", "/home/vscode/init/docker-entrypoint.sh"]
