@@ -1,0 +1,24 @@
+service: rust-sample
+provider:
+  name: aws
+  runtime: rust
+  memorySize: 128
+  region: ap-northeast-1
+  stage: ${opt:stage, self:custom.defaultStage}
+  profile: ${self:custom.profiles.${self:provider.stage}}
+custom:
+  defaultStage: dev
+  defaultRegion: ap-northeast-1
+  profiles:
+    dev: rust_serverless
+plugins:
+  - serverless-rust
+package:
+  individually: true
+functions:
+  rust-function:
+    handler: rust-sample-function
+    events:
+      - http:
+          path: /
+          method: GET
