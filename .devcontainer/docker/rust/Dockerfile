@@ -20,10 +20,13 @@ RUN cd /tmp \
     && curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'awscliv2.zip' \
     && unzip awscliv2.zip \
     && ./aws/install \
-    && rm -rf /tmp/awscliv2 /tmp/awscliv2.zip
+    && rm -rf /tmp/aws /tmp/awscliv2.zip
 
-USER ${USERNAME}
-WORKDIR /home/vscode/develop
+USER ${UNAME}
+WORKDIR /home/${UNAME}/develop
+
+# awscliv2 setting
+COPY --chown=${UNAME}:${UNAME} ./.aws/ /home/${UNAME}/.aws
 
 #rust setting
 RUN rustup update 2>&1 \
