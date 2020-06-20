@@ -15,7 +15,7 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends apt-utils dialog 2>&1 \
     && groupadd -g ${GID} ${UNAME} \
     && useradd -u ${UID} -g ${UNAME} -m ${UNAME}
-# aws cli
+# aws cliv2
 RUN cd /tmp \
     && curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'awscliv2.zip' \
     && unzip awscliv2.zip \
