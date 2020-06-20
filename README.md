@@ -1,13 +1,18 @@
 # RustでのServerlessFrameworkサンプル
 
 
+## 現在の課題
+- ContainerからのローカルLambdaのテストができない
+- Containerからのデプロイもできない
+    - 開発はContainer、ServerlessFrameworkのコマンドはホストでやることで回避はできる
+
 ## 環境準備
 ### node_moduleインストール
 ```
 npm install
 ```
 
-## ServerlessFramework
+### ServerlessFramework
 ### init
 
 
