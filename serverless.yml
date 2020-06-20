@@ -1,4 +1,4 @@
-service: rust-sample
+service: rust-serverless
 provider:
   name: aws
   runtime: rust
@@ -16,7 +16,7 @@ plugins:
 package:
   individually: true
 functions:
-  rust-function:
+  hello_world:
     handler: hello_world
     events:
       - http:

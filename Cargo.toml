@@ -1,4 +1,4 @@
 [workspace]
 members = [
-    "src/main/rust/hello_world/",
+    "src/main/rust/hello_world",
 ]

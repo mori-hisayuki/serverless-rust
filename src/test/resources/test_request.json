@@ -1,0 +1,20 @@
+{
+  "path": "/",
+  "httpMethod": "GET",
+  "headers": {
+    "Host": "amazonaws.com"
+  },
+  "requestContext": {
+    "accountId": "",
+    "resourceId": "",
+    "stage": "dev",
+    "requestId": "",
+    "identity": {
+      "sourceIp": ""
+    },
+    "resourcePath": "",
+    "httpMethod": "",
+    "apiId": ""
+  },
+  "queryStringParameters": {}
+}

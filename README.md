@@ -17,3 +17,8 @@ npm install
 cargo build
 ```
 
+
+### ローカル環境実行
+```
+npx sls invoke local -f hello_world --path src/test/resources/test_request.json
+```
