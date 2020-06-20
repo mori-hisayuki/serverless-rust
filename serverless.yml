@@ -17,7 +17,7 @@ package:
   individually: true
 functions:
   rust-function:
-    handler: rust-sample-function
+    handler: hello_world
     events:
       - http:
           path: /
