@@ -30,8 +30,7 @@ COPY --chown=${UNAME}:${UNAME} ./.aws/ /home/${UNAME}/.aws
 
 #rust setting
 RUN rustup update 2>&1 \
-    && rustup component add rls rust-analysis rust-src rustfmt clippy 2>&a \
-    && cargo install cargo-edit
+    && rustup component add rls rust-analysis rust-src rustfmt clippy 2>&1
 
 #nodenv setting
 RUN git clone git://github.com/nodenv/nodenv.git ~/.nodenv \

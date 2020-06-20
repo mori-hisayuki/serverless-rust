@@ -10,3 +10,6 @@ node_modules
 
 # aws cli
 ./.devcontainer/.aws/credentials
+
+# serverless framework
+.serverless
