@@ -11,7 +11,7 @@ fn handler(
     _: Context,
 ) -> Result<impl IntoResponse, HandlerError> {
     Ok(json!({
-        "message": "AWS Lambda on Rust"
+        "message": "Hello World"
     }))
 }
 
@@ -22,13 +22,15 @@ mod tests {
     #[test]
     fn handler_handles() {
         let request: Request<> = Request::default();
+        println!("{:?}", request);
         let expected = json!({
-            "message": "AWS Lambda on Rust"
+            "message": "Hello World"
         })
         .into_response();
         let response = handler(request, Context::default())
             .expect("expected Ok(_) value")
             .into_response();
+        println!("{:?}", response);
         assert_eq!(response.body(), expected.body())
     }
 }

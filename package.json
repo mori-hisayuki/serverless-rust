@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "login": "serverless login"
+    "login": "serverless login",
+    "test": "cargo test -- --nocapture"
   },
   "author": "",
   "license": "ISC",
